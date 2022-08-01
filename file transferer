@@ -1,0 +1,7 @@
+$cpn = Get-Content .\iplist.txt
+foreach($name in $cpn){
+        Copy-Item -path "C:\Users\XXXX\Desktop\tfasim" -Destination "\\$name\c$\Windows" -Force -Recurse -ErrorAction SilentlyContinue
+    $users = Get-ChildItem -Directory \\$name\c$\users
+    foreach($user in $users){
+        Copy-Item "C:\Users\XXXX\Desktop\tfasim.lnk" -Destination "\\$name\c`$\Users\$user\Desktop" -ErrorAction SilentlyContinue
+        }} 
