@@ -1,4 +1,4 @@
-﻿$linkname = Read-Host "enter Shortcut name "
+﻿$linkname = Read-Host "enter Shortcut name= "
 $cpn = Get-Content .\iplist.txt
 foreach($name in $cpn){
         Copy-Item -path ".\XXfilenameXX" -Destination "\\$name\c$\Windows" -Force -Recurse -ErrorAction SilentlyContinue
